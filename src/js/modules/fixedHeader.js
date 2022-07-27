@@ -6,14 +6,14 @@ export default () => {
   window.addEventListener("scroll", ()=>{
     let scrollDistance = window.scrollY;
 
-    if (scrollDistance >= pageHeader.offsetHeight) {
+    if (scrollDistance >= 10) {
       pageHeader.classList.add("is-fixed");
     } else {
       pageHeader.classList.remove("is-fixed");
     }
   });
 
-  if (window.scrollY >= pageHeader.offsetHeight) {
+  if (window.scrollY >= 10) {
     pageHeader.classList.add("is-fixed");
   }
 };

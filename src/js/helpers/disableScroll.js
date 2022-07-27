@@ -5,7 +5,6 @@ export function disableScroll() {
   document.body.dataset.position = pagePosition;
   document.body.style.top = -pagePosition + 'px';
   document.querySelector(".header").style.opacity = "0";
-  console.log(document.querySelector(".header"));
 }
 
 export function enableScroll() {
@@ -16,8 +15,6 @@ export function enableScroll() {
   window.scroll({ top: pagePosition, left: 0 });
   document.body.removeAttribute('data-position');
   document.querySelector(".header").style.opacity = "1";
-
-  console.log(document.querySelector(".header"));
 }
 
 function lockPadding() {

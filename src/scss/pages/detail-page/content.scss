@@ -43,13 +43,14 @@
   &__heading {
     font: 700 5.6rem/1 var(--second-ff);
     margin-bottom: 5rem;
-    max-width: 80.9rem;
+    max-width: 90%;
 
     @include mq(sm) {
       font-size: 4rem;
       line-height: 1;
       letter-spacing: -0.02em;
       margin-bottom: 4rem;
+      max-width: 100%;
     }
   }
 

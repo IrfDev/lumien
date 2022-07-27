@@ -23,22 +23,17 @@
     {
       name: "Контакты",
       link: "/contacts.html"
+    },
+    {
+      name: "Сферы приминения",
+      link: "/contacts.html"
     }
   ]
 
   let arr2 = [
-    "Образование",
-    "Гос.сектор",
-    "Бизнес",
-    "Кинотеатры",
-    "Домашнее использование",
-    "Стадионы и арены",
-    "Музеи и выставки",
-    "Актовые залы",
-    "Бары и рестораны",
-    "Гостиничый сектор",
-    "VR",
-    "Развлекательные площадки"
+    "Дисплеи",
+    "Экраны",
+    "Мебель",
   ]
 
   let arr3 = [
@@ -132,7 +127,7 @@
                     a.menu__nav-link.menu__legend(href=item.link)= item.name
             .menu__nav-container.menu__nav_grid-container
               nav.menu__nav
-                a(href="/" class="menu__legend menu__nav-legend") Сферы применения
+                a(href="/" class="menu__legend menu__nav-legend") Каталог
                 ul.menu__nav-grid-list
                   for item in arr2
                     li.menu__nav-item-small
@@ -145,15 +140,7 @@
                       a.menu__nav-link.menu__legend-small(href=item.link)= item.name
           .menu__download-links-wrapper
             a.menu__download-link(href="/" download)
-              | Брошюра
-              .menu__download-icon-wrapper
-                +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
-            a.menu__download-link(href="/" download)
-              | Прайс-лист
-              .menu__download-icon-wrapper
-                +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
-            a.menu__download-link(href="/" download)
-              | Каталог
+              | Каталоги и прайс-листы
               .menu__download-icon-wrapper
                 +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
       .menu__block

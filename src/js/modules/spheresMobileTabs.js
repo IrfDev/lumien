@@ -14,9 +14,7 @@ export default () => {
       const imgBgSrc = btn.dataset.img;
 
       mobileLayer.setAttribute("data-bg", imgBgSrc);
-      mobileLayer.setAttribute("data-bg-fallback", imgBgSrc);
-
-      window.lumien_API.updateLazyLoad();
+      mobileLayer.setAttribute("style", `background-image: url(${imgBgSrc});`);
 
       tabBtns.forEach(tabBtn => tabBtn.classList.remove("is-active"));
       btn.classList.add("is-active");

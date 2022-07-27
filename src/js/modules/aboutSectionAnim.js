@@ -11,7 +11,8 @@ export default () => {
   });
 
   gsap.set(".about-company__txt", {
-    yPercent: 150
+    yPercent: 150,
+    opacity: 0
   });
 
   gsap.set(".about-company__img", {
@@ -30,6 +31,7 @@ export default () => {
 
       gsap.to(".about-company__txt", {
         yPercent: 0,
+        opacity: 1,
         duration: 0.3
       });
 
