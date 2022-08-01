@@ -16,7 +16,7 @@ gsap.registerPlugin([SplitText]);
 
 export default () => {
   const imgs = Array.from(document.querySelectorAll(".intro-content__img"));
-  const layers = Array.from(document.querySelectorAll(".intro__layer-slide"));
+  const layers = Array.from(document.querySelectorAll(".js-intro-l"));
   const sliderheadings = Array.from(document.querySelectorAll(".intro-content__heading"));
   const sliderTexts = Array.from(document.querySelectorAll(".js-intro-content-anim"));
   const timeline = gsap.timeline();

@@ -1,3 +1,45 @@
+@keyframes anim1 {
+  from {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(15rem, 15rem) scale(1.1);
+  }
+
+  to {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes anim2 {
+  from {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-15rem, -15rem);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes anim3 {
+  from {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-5rem, 5rem);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
 .intro {
   height: 90vh;
   background-color: var(--color-dark);
@@ -7,6 +49,387 @@
   position: relative;
   z-index: 3;
   overflow: hidden;
+
+  &_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    &.mod-show {
+      opacity: 1;
+    }
+
+    ._circle {
+      position: absolute;
+      top: 0;
+      left: 20%;
+      width: 58.8rem;
+      height: 83.3rem;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
+      filter: blur(58px);
+      animation: anim1 infinite 10s linear;
+
+      @include mq(custom, min, 1999) {
+        top: 31%;
+        left: -10%;
+        width: 178.8rem;
+        height: 93.3rem;
+      }
+
+      @include mq(custom, max, 1366) {
+        left: 8%;
+      }
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    ._circle2 {
+      position: absolute;
+      top: 37%;
+      right: -23%;
+      z-index: 2;
+      width: 134rem;
+      height: 132rem;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
+      filter: blur(54px);
+      animation: anim2 infinite 10s linear;
+
+      @include mq(custom, min, 1999) {
+        width: 184rem;
+        height: 182rem;
+      }
+
+      @include mq(sm) {
+        width: 54rem;
+        height: 72rem;
+      }
+
+      ._inner {
+        transform: matrix(0.95, 0.29, -0.3, 0.96, 0, 0);
+        width: 134rem;
+        height: 132rem;
+
+        @include mq(custom, min, 1999) {
+          width: 184rem;
+          height: 182rem;
+        }
+
+        @include mq(sm) {
+          width: 44rem;
+          height: 92rem;
+        }
+
+        clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+        background: radial-gradient(80.26% 48.84% at 46.96% 49.35%, #E86235 0%, rgba(210, 61, 69, 0) 84.38%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        ,
+        radial-gradient(130.21% 76.05% at 28.58% 43.91%, #FF7300 0%, rgba(245, 153, 48, 0) 65.45%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        ;
+      }
+    }
+
+    ._circle3 {
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      width: 100rem;
+      height: 100rem;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
+      animation: anim3 infinite 10s linear;
+
+      @include mq(custom, min, 1999) {
+        top: 20%;
+        left: 24%;
+        width: 150rem;
+        height: 150rem;
+      }
+
+      @include mq(sm) {
+        width: 80rem;
+        height: 60rem;
+      }
+    }
+  }
+
+  &_layer-second {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    &.mod-show {
+      opacity: 1;
+    }
+
+    ._circle {
+      position: absolute;
+      right: 0;
+      bottom: -4rem;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
+      filter: blur(64px);
+      transform-origin: right bottom;
+      transform: scale(0.8);
+      animation: animscale 10s linear infinite;
+
+      @include mq(custom, min, 1999) {
+        bottom: -56rem;
+        width: 190rem;
+        height: 150rem;
+      }
+
+      @include mq(custom, max, 1366) {
+        width: 110rem;
+        height: 63rem;
+      }
+
+      @include mq(md) {
+        width: 80rem;
+        height: 43rem;
+      }
+
+      @include mq(sm) {
+        width: 30rem;
+        height: 23rem;
+      }
+    }
+
+    ._circle2 {
+      position: absolute;
+      top: 10rem;
+      left: 30rem;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
+      filter: blur(43px);
+      animation: animscale2 infinite 10s linear;
+
+      @include mq(custom, min, 1999) {
+        top: 28rem;
+        left: 7rem;
+        width: 139rem;
+        height: 170rem;
+      }
+
+      @include mq(custom, max, 1366) {
+        top: 20rem;
+        left: 0rem;
+        width: 100rem;
+        height: 90rem;
+      }
+
+      @include mq(md) {
+        width: 70rem;
+        height: 40rem;
+      }
+
+      @include mq(sm) {
+        width: 21rem;
+        height: 32rem;
+      }
+    }
+
+    @keyframes animscale {
+      from {
+        transform: translateY(0) scale(0.8);
+      }
+
+      50% {
+        transform: translateY(-10rem) scale(1.1);
+      }
+
+      to {
+        transform: translateY(0) scale(0.8);
+      }
+    }
+
+    @keyframes animscale2 {
+      from {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(-10rem, 10rem) scale(1.3);
+      }
+
+      to {
+        transform: translate(0, 0) scale(1);
+      }
+    }
+  }
+
+  &_layer-third {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    &.mod-show {
+      opacity: 1;
+    }
+
+    ._circle {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 3;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
+      filter: blur(74px);
+      transform-origin: bottom left;
+      animation: scaleAnim2 10s linear infinite;
+
+      @include mq(custom, max, 1680) {
+        width: auto;
+        height: 36rem;
+        filter: blur(38px);
+      }
+
+      @include mq(sm) {
+        height: 16rem;
+        filter: blur(28px);
+      }
+    }
+
+    ._circle2 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
+      filter: blur(34px);
+      transform-origin: bottom right;
+      animation: scaleAnim2 10s linear infinite;
+
+      @include mq(custom, max, 1440) {
+        width: auto;
+        height: 74rem;
+      }
+
+
+      @include mq(custom, max, 1366) {
+        height: 44rem;
+      }
+
+      @include mq(sm) {
+        height: 29rem;
+      }
+    }
+
+    ._circle3 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
+      filter: blur(5px);
+      transform-origin: bottom right;
+      animation: scaleAnim 50s linear infinite;
+
+      @include mq(custom, max, 1366) {
+        width: auto;
+        height: 53rem;
+      }
+
+      @include mq(custom, max, 1280) {
+        height: 42rem;
+      }
+
+      @include mq(sm) {
+        height: 18rem;
+      }
+    }
+
+    @keyframes scaleAnim {
+      from {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes scaleAnim2 {
+      from {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+  }
 
   @include mq(md) {
     height: auto;
@@ -19,6 +442,8 @@
   }
 
   &__container {
+    position: relative;
+    z-index: 4;
     height: 100%;
   }
 
@@ -73,7 +498,7 @@
 
 .intro-content {
   display: grid;
-  grid-template-columns: repeat(10,1fr);
+  grid-template-columns: repeat(10, 1fr);
   column-gap: var(--grid-offset);
   min-width: 0;
   user-select: none;
@@ -205,6 +630,7 @@
     }
 
     @include mq(md, min) {
+
       &:hover,
       &:focus {
         .intro-content__btn-text {
@@ -288,11 +714,16 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: 3;
     transform: translateY(0);
     transition: transform 1300ms;
     width: 130rem;
     height: 46.7rem;
+
+    @include mq(custom, min, 1999) {
+      width: 73%;
+      height: auto;
+    }
 
     &.is-furniture {
       mix-blend-mode: darken;
@@ -399,7 +830,7 @@
       color: var(--color-white);
 
       &::after {
-        animation: slide-progress 8s cubic-bezier(.3,0,.3,1) forwards;
+        animation: slide-progress 8s cubic-bezier(.3, 0, .3, 1) forwards;
       }
 
       &::before {
@@ -410,7 +841,7 @@
         width: 6.8rem;
 
         &::before {
-          animation: slide-progress-mobile 8s cubic-bezier(.3,0,.3,1) forwards;
+          animation: slide-progress-mobile 8s cubic-bezier(.3, 0, .3, 1) forwards;
         }
       }
     }
@@ -465,21 +896,21 @@
 }
 
 @keyframes slide-progress {
-	0% {
-		width: 0;
-	}
+  0% {
+    width: 0;
+  }
 
-	100% {
-		width: 19.7rem;
-	}
+  100% {
+    width: 19.7rem;
+  }
 }
 
 @keyframes slide-progress-mobile {
-	0% {
-		width: 0;
-	}
+  0% {
+    width: 0;
+  }
 
-	100% {
-		width: 100%;
-	}
+  100% {
+    width: 100%;
+  }
 }

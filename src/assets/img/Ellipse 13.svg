@@ -1,0 +1,16 @@
+<svg width="1112" height="1004" viewBox="0 0 1112 1004" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.67">
+<path d="M15.2498 870.177C-54.9974 820.696 153.39 531.872 63.7943 471.369C-25.8012 410.866 124.02 463.877 297.779 213.669C689.92 -351.001 525.485 386.446 737.076 362.697C948.666 338.948 1224.04 428.854 1075.2 791.953C926.369 1155.05 141.39 959.026 15.2498 870.177Z" fill="url(#paint0_diamond_2_126)"/>
+<path d="M15.2498 870.177C-54.9974 820.696 153.39 531.872 63.7943 471.369C-25.8012 410.866 124.02 463.877 297.779 213.669C689.92 -351.001 525.485 386.446 737.076 362.697C948.666 338.948 1224.04 428.854 1075.2 791.953C926.369 1155.05 141.39 959.026 15.2498 870.177Z" fill="url(#paint1_diamond_2_126)"/>
+</g>
+<defs>
+<radialGradient id="paint0_diamond_2_126" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(799.959 681.492) rotate(-144.018) scale(947.175 1515.84)">
+<stop stop-color="#FFAE4F"/>
+<stop offset="0.532933" stop-color="#F59930" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_diamond_2_126" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(558.862 578.254) rotate(-139.235) scale(516.738 813.664)">
+<stop stop-color="#E86235"/>
+<stop offset="0.84375" stop-color="#D23D45" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

@@ -68,8 +68,9 @@
     color: var(--heading-color);
     transition: color var(--transition);
 
-    @include mq(lg) {
+    @include mq(custom, max, 1600) {
       font: var(--font-title-4);
+      max-width: 42.1rem;
     }
 
     @include mq(sm) {
