@@ -1,6 +1,7 @@
 import Swiper, {
   Navigation
 } from 'swiper/swiper-bundle';
+import alignHeights from './alignHeights';
 
 Swiper.use([Navigation]);
 
@@ -31,7 +32,22 @@ export default () => {
           slidesPerView: slidesCount,
           spaceBetween: 60
         },
+      },
+      on: {
+        init: (swiper) => {
+          // Фикс бага с кнопками на разных высотах
+          alignHeights('.slider-equipment__slider', '.cart__name');
+          alignHeights('.slider-equipment__slider', '.cart__txt');
+          alignHeights('.slider-equipment__slider', '.cart__top');
+        },
+        afterInit: (swiper) => {
+          // alignHeights('.slider-equipment__slider', '.cart__img-pagination');
+        }
       }
     });
+
+    setTimeout(() => {
+      alignHeights('.slider-equipment__slider', '.cart__img-pagination');
+    }, 300)
   });
 }

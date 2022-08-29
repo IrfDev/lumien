@@ -10,4 +10,9 @@ package-lock.json
 /.git/
 /**/_backstage
 /**/Thumbs.db
+<<<<<<< HEAD
 /build/**/*
+=======
+/build/
+build
+>>>>>>> 6a56fa23fdba715a88e907cca20205821928e17d
