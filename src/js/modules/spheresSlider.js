@@ -65,7 +65,7 @@ export default () => {
 
     let sliderThumb = new Swiper(".spheres__nav", {
       slidesPerView: 'auto',
-      spaceBetween: 32,
+      spaceBetween: 0,
       allowTouchMove: false,
       on: {
         init: function (swiper) {

@@ -40,6 +40,7 @@ import cartModalAccordion from './modules/cartModalAccordion.js';
 import dateInput from './modules/dateInput.js';
 import aboutPageHistorySlider from './modules/aboutPageHistorySlider.js';
 import characteristics from './modules/charactiristics';
+import selectModalCallback from './modules/selectModalCallback';
 
 smoothscroll.polyfill();
 
@@ -90,6 +91,7 @@ documenReady(() => {
   dateInput();
   aboutPageHistorySlider();
   characteristics();
+  selectModalCallback();
 
   // always last
   cartImgsSlider();
