@@ -13,7 +13,7 @@
 
     elements.forEach(element => {
       if (element.classList.contains('cart__img-pagination')) {
-        console.log(element.offsetHeight);
+        // console.log(element.offsetHeight);
       }
     })
 

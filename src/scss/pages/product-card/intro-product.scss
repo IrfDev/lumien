@@ -215,6 +215,10 @@
     background-color: var(--color-white);
     cursor: pointer;
 
+    // &.swiper-button-disabled {
+    //   display: none !important;
+    // }
+
     &::before {
       position: absolute;
       top: 50%;

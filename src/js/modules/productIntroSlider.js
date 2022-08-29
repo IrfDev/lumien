@@ -6,6 +6,11 @@ Swiper.use([Navigation, Controller, Thumbs, Pagination]);
 
 export default () => {
   const descktop =  window.matchMedia('(min-width: 992px)');
+  const count = document.querySelectorAll(".intro-product__slider-thumb-img").length
+
+  if (count <= 3) {
+    document.querySelectorAll(".intro-product__slider-btn").forEach(btn => btn.style.display = "none");
+  }
 
   if (descktop.matches) {
     let prductSliderThumb = new Swiper(".js-product-intro-thumb-slider", {
@@ -21,6 +26,7 @@ export default () => {
       thumbs: {
         swiper: prductSliderThumb,
       },
+      watchSlidesProgress: true,
       navigation: {
         nextEl:  '.js-intro-product-btn-next',
         prevEl: '.js-intro-product-btn-prev',
