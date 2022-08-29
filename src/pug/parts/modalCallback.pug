@@ -29,9 +29,10 @@
         label.form__label
           input(type="email" class="form__input input-reset" name="email" placeholder="Email" data-parsley-required)
         label.form__agreement-label
-          input(type="checkbox" class="visually-hidden" name="agreement" data-parsley-required)
+          input(type="checkbox" class="visually-hidden" checked name="agreement" data-parsley-required)
           span
             |	Согласен на обработку персональных данных
+          span.form__agreement-tooltip #[i] Подтвердите согласие на обработку персональных данных
         button.button-reset.button.form__btn.site-modal__form-btn
           |	Отправить заявку
 
