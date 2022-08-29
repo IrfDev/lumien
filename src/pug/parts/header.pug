@@ -8,9 +8,7 @@ header.header(class=headerClass class="fix-block")
         |	Каталог
     .header__block
       button.button-reset.header__menu-btn.js-open-menu-btn
-        span
-        span
-        span
+        +icon-mono("burger")(width="57" height="19")
       a.header__link(href="/spheres.html" class=(pageName === "applications" ? "_is-current" : false))
         |	Сферы применения
       a.header__link(href="/cases-page.html")
@@ -23,9 +21,7 @@ header.header(class=headerClass class="fix-block")
       a.header__link.header__page-link(href="tel:+74957975775")
         |	+7 495 797-57-75
       button.button-reset.header__menu-btn.js-open-menu-btn._mobile
-        span
-        span
-        span
+        +icon-mono("burger")(width="57" height="19")
       button.button-reset.button.header__btn(data-path="callback")
         span.mobile-hidden Оставить заявку
         span.descktop-hidden Заявка

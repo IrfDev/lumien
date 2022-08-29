@@ -57,9 +57,23 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+    visibility: hidden;
 
     &.mod-show {
       opacity: 1;
+      visibility: visible;
+
+      ._circle3 {
+        animation: anim3 infinite 10s linear;
+      }
+
+      ._circle2 {
+        animation: anim2 infinite 10s linear;
+      }
+
+      ._circle {
+        animation: anim1 infinite 10s linear;
+      }
     }
 
     ._circle {
@@ -77,7 +91,7 @@
       transform: translate3d(0, 0, 0);
       transform: translateZ(0);
       filter: blur(58px);
-      animation: anim1 infinite 10s linear;
+
 
       @include mq(custom, min, 1999) {
         top: 31%;
@@ -111,7 +125,7 @@
       transform: translate3d(0, 0, 0);
       transform: translateZ(0);
       filter: blur(54px);
-      animation: anim2 infinite 10s linear;
+
 
       @include mq(custom, min, 1999) {
         width: 184rem;
@@ -162,7 +176,7 @@
       perspective: 1000;
       transform: translate3d(0, 0, 0);
       transform: translateZ(0);
-      animation: anim3 infinite 10s linear;
+
 
       @include mq(custom, min, 1999) {
         top: 20%;
@@ -185,9 +199,19 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+    visibility: hidden;
 
     &.mod-show {
       opacity: 1;
+      visibility: visible;
+
+      ._circle2 {
+        animation: animscale2 infinite 10s linear;
+      }
+
+      ._circle {
+        animation: animscale 10s linear infinite;
+      }
     }
 
     ._circle {
@@ -205,7 +229,7 @@
       filter: blur(64px);
       transform-origin: right bottom;
       transform: scale(0.8);
-      animation: animscale 10s linear infinite;
+
 
       @include mq(custom, min, 1999) {
         bottom: -56rem;
@@ -242,7 +266,6 @@
       transform: translate3d(0, 0, 0);
       transform: translateZ(0);
       filter: blur(43px);
-      animation: animscale2 infinite 10s linear;
 
       @include mq(custom, min, 1999) {
         top: 28rem;
@@ -305,9 +328,23 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+    visibility: hidden;
 
     &.mod-show {
       opacity: 1;
+      visibility: visible;
+
+      ._circle {
+        animation: scaleAnim2 10s linear infinite;
+      }
+
+      ._circle2 {
+        animation: scaleAnim2 10s linear infinite;
+      }
+
+      ._circle3 {
+        animation: scaleAnim 50s linear infinite;
+      }
     }
 
     ._circle {
@@ -325,7 +362,7 @@
       transform: translateZ(0);
       filter: blur(74px);
       transform-origin: bottom left;
-      animation: scaleAnim2 10s linear infinite;
+
 
       @include mq(custom, max, 1680) {
         width: auto;
@@ -354,7 +391,7 @@
       transform: translateZ(0);
       filter: blur(34px);
       transform-origin: bottom right;
-      animation: scaleAnim2 10s linear infinite;
+
 
       @include mq(custom, max, 1440) {
         width: auto;
@@ -386,7 +423,7 @@
       transform: translateZ(0);
       filter: blur(5px);
       transform-origin: bottom right;
-      animation: scaleAnim 50s linear infinite;
+
 
       @include mq(custom, max, 1366) {
         width: auto;
@@ -719,6 +756,7 @@
     transition: transform 1300ms;
     width: 130rem;
     height: 46.7rem;
+    will-change: transform;
 
     @include mq(custom, min, 1999) {
       width: 73%;
@@ -747,6 +785,8 @@
 
     &:not(.mod-show) {
       transform: translateY(100%);
+      -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
     }
 
     @include mq(lg) {
