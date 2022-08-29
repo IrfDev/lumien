@@ -61,10 +61,10 @@ section.applications.section-indent.top-offset
         a.applications-cart(href="/spheres-detail.html")
           .applications-cart__img-wrapper(style=`clip-path: url(#product-card-4628623${index});--overlay-color: rgba(0, 0, 0, 0.2);`)
             img(src=`images/applications-cart/img${index}.jpg` alt=item.name class="applications-cart__img")
-            svg(height="0" width="0" preserveAspectRatio="none")
+            svg(height="0" width="0" preserveAspectRatio="none" class="svg")
               defs
                 clippath(id=`product-card-4628623${index}`)
-                  rect(fill="#FFFFFF" rx="25" ry="25" x="0" y="0" width="100" height="100")
+                  rect(fill="#FFFFFF" class="rect" rx="25" ry="25" x="0" y="0" width="100" height="100")
           .applications-cart__inner
             .applications-cart__inner-heading
               h3!= item.name

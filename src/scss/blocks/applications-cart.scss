@@ -183,16 +183,13 @@
 
       rect {
         width: 100%;
-        height: 100%;
-        height: 24rem;
-        transition: height var(--transition);
+        height: 52rem;
+        transform-origin: top center;
+        transform: scaleX(1) scaleY(0.5);
+        transition: transform var(--transition);
 
-        @include mq(custom, max, 1440) {
-          height: 28rem;
-        }
-
-        @include mq(custom, max, 1366) {
-          height: 25rem;
+        @include mq(lg) {
+          transform: scaleX(1) scaleY(1);
         }
       }
     }
@@ -223,10 +220,10 @@
   }
 
   &:hover {
-    .applications-cart__img-wrapper {
-      svg {
-        rect {
-          height: 52rem;
+    div.applications-cart__img-wrapper {
+      svg.svg {
+        rect.rect {
+          transform: scaleX(1) scaleY(1);
         }
       }
     }
