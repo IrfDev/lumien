@@ -6,35 +6,42 @@
  * @param {String} elementSelector - селектор элементов, которые нужно выровнять
  */
  function alignHeights(parentSelector, elementSelector) {
-  const container = document.querySelector(parentSelector);
-  if (!container) return;
+  const containers = document.querySelectorAll(parentSelector);
 
-  const elements = container.querySelectorAll(elementSelector);
+  containers.forEach(container => {
+    const elements = container.querySelectorAll(elementSelector);
 
-  if (elements.length === 0) return;
+    elements.forEach(element => {
+      if (element.classList.contains('cart__img-pagination')) {
+        console.log(element.offsetHeight);
+      }
+    })
 
-  const setMaxHeight = () => {
-    let height = 0;
+    if (elements.length === 0) return;
 
-    //Определяем максимальную высоту блока
-    for(let i = 0; i < elements.length; i++ ){
-      // Обнуляем height, иначе при ресайзе будет баг
-      elements[i].style.height = 'auto';
+    const setMaxHeight = () => {
+      let height = 0;
 
-      let currentHeight = elements[i].clientHeight;
-      if(currentHeight > height) {
-        height = currentHeight;
+      //Определяем максимальную высоту блока
+      for(let i = 0; i < elements.length; i++ ){
+        // Обнуляем height, иначе при ресайзе будет баг
+        elements[i].style.height = 'auto';
+
+        let currentHeight = elements[i].offsetHeight;
+        if(currentHeight > height) {
+          height = currentHeight;
+        }
+      }
+      //Задаем максимальную высоту блока всем элементам
+      for( let i = 0; i < elements.length; i++ ){
+        elements[i].style.height = height + 'px';
       }
     }
-    //Задаем максимальную высоту блока всем элементам
-    for( let i = 0; i < elements.length; i++ ){
-      elements[i].style.height = height + 'px';
-    }
-  }
 
-  setMaxHeight();
+    setMaxHeight();
 
-  window.addEventListener('resize', setMaxHeight);
+    window.addEventListener('resize', setMaxHeight);
+  })
 }
 
 export default alignHeights;
