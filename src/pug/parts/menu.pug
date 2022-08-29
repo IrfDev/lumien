@@ -59,6 +59,14 @@
     }
   ]
 
+  let arr4 = [
+    "Все сферы применения",
+    "Образование",
+    "Бизнес",
+    "Домашнее использование",
+    "Музеи и выставки"
+  ]
+
 .menu
   .menu_layer
   .menu__container.fix-blocks
@@ -134,6 +142,23 @@
                   for item in arr3
                     li.menu__nav-item-small
                       a.menu__nav-link.menu__legend-small(href=item.link)= item.name
+            .menu__mobile-block
+              ul.menu__mobile-accordion.accordion
+                li.menu__mobile-accordion-item
+                  button.button-reset.menu__mobile-accordion-head.js-drop-menu-btn
+                    span.menu__legend Сферы применения
+                  .js-drop-menu-container.drop-menu-container
+                    ul.menu__mobile-accordion-body.js-drop-menu
+                      for item in arr4
+                        li.menu__mobile-accordion-body-item #[a(href="/" class="menu__legend-small")= item]
+              ul.menu__mobile-accordion.accordion
+                li.menu__mobile-accordion-item
+                  button.button-reset.menu__mobile-accordion-head.js-drop-menu-btn
+                    span.menu__legend Клиентам
+                  .js-drop-menu-container.drop-menu-container
+                    ul.menu__mobile-accordion-body.js-drop-menu
+                      for item in arr4
+                        li.menu__mobile-accordion-body-item #[a(href="/" class="menu__legend-small")= item]
           .menu__download-links-wrapper
             a.menu__download-link(href="/" download)
               | Каталоги и прайс-листы
@@ -142,4 +167,3 @@
       .menu__block
         button.button-reset.menu__close-btn.js-close-menu-btn
           +icon-mono("cross")(class="menu__close-btn-icon" width="13" height="13")
-

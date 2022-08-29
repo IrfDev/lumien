@@ -89,6 +89,10 @@
 
 	&__logo {
 		color: var(--default-color);
+
+    &:focus {
+      color: #e7630c;
+    }
 	}
 
   &__block {

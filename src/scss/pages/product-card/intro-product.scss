@@ -32,6 +32,7 @@
 
   &__block {
     min-width: 0;
+    overflow: hidden;
 
     &:nth-child(1) {
       grid-column: 7 span;
@@ -148,7 +149,10 @@
   }
 
   &__slider-thumb {
+    position: relative;
     max-width: 49.1rem;
+    width: auto;
+    overflow: visible;
 
     .swiper-slide {
       cursor: pointer;
@@ -162,6 +166,77 @@
 
     @include mq(md) {
       display: none;
+    }
+  }
+
+  &__slider-nav {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: -7.2rem;
+    height: 100%;
+    width: calc(100% + 14.2rem);
+    transform: translateY(-50%);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__slider-bg {
+    position: absolute;
+    z-index: 2;
+    height: 110%;
+    top: -1rem;
+    width: 100%;
+    content: "";
+
+    &:nth-child(1) {
+      right: -100%;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 11%);
+    }
+
+    &:nth-child(2) {
+      left: -100%;
+      background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 11%);
+    }
+  }
+
+  &__slider-btn {
+    position: relative;
+    pointer-events: auto;
+    width: 6.2rem;
+    height: 6.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba($color: #000000, $alpha: 0.4);
+    background-color: var(--color-white);
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-bottom: 2px solid rgba($color: #000000, $alpha: 0.4);
+      border-right: 2px solid rgba($color: #000000, $alpha: 0.4);
+      transform: translate(-50%, -50%);
+      content: "";
+    }
+
+    &:nth-child(2) {
+      &::before {
+        transform: translate(-63%, -50%) rotate(-45deg);
+      }
+    }
+
+    &:nth-child(1) {
+      &::before {
+        transform: translate(-43%, -50%) rotate(133deg);
+      }
     }
   }
 

@@ -90,6 +90,16 @@
 
   &__nav_grid-container {
     grid-column: 4 span;
+
+    @include mq(sm) {
+      grid-column: 8 span;
+    }
+  }
+
+  &__nav-container {
+    @include mq(sm) {
+      margin-top: 2rem;
+    }
   }
 
   &__block-inner {
@@ -111,7 +121,8 @@
     }
 
     @include mq(sm) {
-      gap: 1rem 0;
+      gap: 0;
+      padding-bottom: 0;
     }
   }
 
@@ -161,6 +172,10 @@
   &__nav-legend {
     display: inline-block;
     margin-bottom: 2.6rem;
+
+    @include mq(sm) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__nav-item-small {
@@ -217,7 +232,7 @@
   &__download-links-wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     @include mq(sm) {
       gap: 1rem;
@@ -352,6 +367,64 @@
       @include mq(sm) {
         font: var(--font-body-XS);
       }
+    }
+  }
+
+  &__mobile-block {
+    display: none;
+    grid-column: 8 span;
+    padding-top: 2rem;
+    border-top: 1px solid #3F3F3F;
+    margin-bottom: 5.4rem;
+
+    @include mq(sm) {
+      display: block;
+    }
+  }
+
+  &__mobile-accordion {
+    margin-bottom: 3rem;
+    border: none;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__mobile-accordion-head {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    &.is-active {
+      &::before {
+        transform: translateY(4%) rotate(-135deg);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 42%;
+      right: -2rem;
+      transform: translateY(-50%) rotate(45deg);
+      width: 0.8rem;
+      height: 0.8rem;
+      border-bottom: 2px solid var(--color-white);
+      border-right: 2px solid var(--color-white);
+      transition: transform var(--transition);
+      content: "";
+    }
+  }
+
+  &__mobile-accordion-body {
+    padding-top: 1.2rem;
+  }
+
+  &__mobile-accordion-body-item {
+    margin-bottom: 0.2rem;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

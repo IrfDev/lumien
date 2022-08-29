@@ -21,6 +21,10 @@ export default () => {
       thumbs: {
         swiper: prductSliderThumb,
       },
+      navigation: {
+        nextEl:  '.js-intro-product-btn-next',
+        prevEl: '.js-intro-product-btn-prev',
+      },
     });
   } else {
     let prductSlider = new Swiper(".js-product-intro-slider", {
