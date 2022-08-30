@@ -8,7 +8,7 @@ export default () => {
 
     sltc.closest(".custom-select").classList.add("is-active");
 
-    if (value === "Не выбрано") {
+    if (value === "0") {
       sltc.closest(".custom-select").classList.remove("is-active");
     }
   });
