@@ -277,6 +277,7 @@ input[type=number] {
 
 .site-first-heading {
   font: var(--font-title-1);
+  line-height: 1.3;
 
   @include mq(md) {
     font: var(--font-title-2);

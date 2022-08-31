@@ -1,15 +1,17 @@
 export default () => {
   // kostil selecta
-  const sltc = document.querySelector(".js-callback-select");
+  const sltcs = Array.from(document.querySelectorAll(".js-callback-select"));
 
-  sltc.addEventListener("change", (e) => {
-    let self = e.target;
-    let value = e.target.options[e.target.selectedIndex].value;
+  sltcs.forEach(sltc => {
+    sltc.addEventListener("change", (e) => {
+      let self = e.target;
+      let value = e.target.options[e.target.selectedIndex].value;
 
-    sltc.closest(".custom-select").classList.add("is-active");
+      sltc.closest(".custom-select").classList.add("is-active");
 
-    if (value === "0") {
-      sltc.closest(".custom-select").classList.remove("is-active");
-    }
-  });
+      if (value === "0") {
+        sltc.closest(".custom-select").classList.remove("is-active");
+      }
+    });
+  })
 };

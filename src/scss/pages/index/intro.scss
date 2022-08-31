@@ -64,15 +64,24 @@
       visibility: visible;
 
       ._circle3 {
-        animation: anim3 infinite 10s linear;
+        -webkit-animation-name: anim3;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
       }
 
       ._circle2 {
-        animation: anim2 infinite 10s linear;
+        -webkit-animation-name: anim2;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
       }
 
       ._circle {
-        animation: anim1 infinite 10s linear;
+        -webkit-animation-name: anim1;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
       }
     }
 
@@ -206,11 +215,17 @@
       visibility: visible;
 
       ._circle2 {
-        animation: animscale2 infinite 10s linear;
+        -webkit-animation-name:animscale2;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
       }
 
       ._circle {
-        animation: animscale 10s linear infinite;
+        -webkit-animation-name:animscale;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
       }
     }
 
@@ -335,15 +350,24 @@
       visibility: visible;
 
       ._circle {
-        animation: scaleAnim2 10s linear infinite;
+        -webkit-animation-name:scaleAnim2;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
       }
 
       ._circle2 {
-        animation: scaleAnim2 10s linear infinite;
+        -webkit-animation-name:scaleAnim2;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
       }
 
       ._circle3 {
-        animation: scaleAnim 50s linear infinite;
+        -webkit-animation-name:scaleAnim;
+        -webkit-animation-duration: 50s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
       }
     }
 
