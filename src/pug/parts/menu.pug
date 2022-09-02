@@ -136,7 +136,7 @@
                   for item in arr2
                     li.menu__nav-item-small
                       a.menu__nav-link.menu__legend-small(href="/spheres-detail.html")= item
-              nav.menu__nav
+              nav.menu__nav.menu__nav-mobile
                 a(href="/" class="menu__legend menu__nav-legend") Клиентам
                 ul.menu__nav-grid-list
                   for item in arr3
@@ -160,10 +160,12 @@
                       for item in arr4
                         li.menu__mobile-accordion-body-item #[a(href="/" class="menu__legend-small")= item]
           .menu__download-links-wrapper
-            a.menu__download-link(href="/" download)
-              | Каталоги и прайс-листы
-              .menu__download-icon-wrapper
-                +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
+            .menu__download-links-block
+            .menu__download-links-block
+              a.menu__download-link(href="/" download)
+                | Каталоги и прайс-листы
+                .menu__download-icon-wrapper
+                  +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
       .menu__block
         button.button-reset.menu__close-btn.js-close-menu-btn
           +icon-mono("cross")(class="menu__close-btn-icon" width="13" height="13")

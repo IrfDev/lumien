@@ -169,6 +169,12 @@
     }
   }
 
+  &__nav-mobile {
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
   &__nav-legend {
     display: inline-block;
     margin-bottom: 2.6rem;
@@ -230,13 +236,22 @@
   }
 
   &__download-links-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: var(--grid-offset);
+    position: relative;
 
     @include mq(sm) {
       gap: 1rem;
       justify-content: stretch;
+    }
+  }
+
+  &__download-links-block {
+    grid-column: 4 span;
+
+    @include mq(sm) {
+      grid-column: 8 span;
     }
   }
 
