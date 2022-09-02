@@ -148,11 +148,11 @@ export default () => {
           activeBorder.style.width = offsetWidth + 12 + "px";
         };
 
-        if (swiper.activeIndex === slides.length - 1) {
-          let offsetWidth = sliderContainer.offsetWidth - slide.offsetWidth;
+        // if (swiper.activeIndex === slides.length - 1) {
+        //   let offsetWidth = sliderContainer.offsetWidth - slide.offsetWidth;
 
-          activeBorder.style.left = offsetWidth / 10 - 0.6 + "rem";
-        };
+        //   activeBorder.style.left = -0.6 + "rem";
+        // };
       });
 
     });
