@@ -185,11 +185,11 @@
 
     .parsley-errors-list {
       position: absolute;
-      bottom: 0;
-      right: 0.5rem;
+      bottom: 0.6rem;
+      left: 2rem;
       z-index: 2;
-      color: red;
-      font: var(--font-body-XS);
+      color: #FF971D;
+      font: 400 1rem/1 var(--main-ff);
     }
   }
 
@@ -232,6 +232,11 @@
       @include mq(sm) {
         font: var(--font-body-S);
       }
+    }
+
+    &.parsley-error {
+      background-color: rgba(255, 151, 29, 0.2);
+      border: 1px solid #FF971D;
     }
 
     @include mq(sm) {
