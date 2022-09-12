@@ -147,9 +147,11 @@
     flex-wrap: wrap;
     flex-direction: row;
     padding: 0;
+    height: 17rem;
 
     .cart__top {
       width: 100%;
+      margin-bottom: 1.5rem;
     }
 
     .cart__middle {

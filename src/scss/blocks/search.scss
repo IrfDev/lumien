@@ -209,6 +209,10 @@
     &:nth-last-of-type(1) {
       margin-bottom: 0;
     }
+
+    &._mb {
+      margin-bottom: 3rem;
+    }
   }
 
   &__content-heading-wrapper {
@@ -238,7 +242,7 @@
   &__content-card {
     position: relative;
     grid-column: 2 span;
-    height: 14.5rem;
+    height: 17rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -23,8 +23,7 @@ export default () => {
   gsap.set(searchForm, {yPercent: -150});
 
   timeline
-    .to(header, {autoAlpha: 0, ease: "power4.out"}, "-=0.8")
-    .to(searchContainer, {autoAlpha: 1, duration: 0.8, ease: "power4.out"}, "-=0.8")
+    .to(searchContainer, {autoAlpha: 1, duration: 0.8, ease: "power4.out", onStart: () => header.classList.add("is-hidden")}, "-=0.8")
     .to(searchForm, {yPercent: 0, duration: 0.3, ease: "power4.out"}, "-=0.4")
 
   timeline2
@@ -35,10 +34,6 @@ export default () => {
     timeline.play();
 
     disableScroll();
-
-    setTimeout(() => {
-      searchInput.focus();
-    }, 1000);
   });
 
   searchCloseBtn.addEventListener("click", ()=>{
@@ -48,13 +43,13 @@ export default () => {
       searchContent.classList.remove("is-shown");
     }
 
+    setTimeout(() => {
+      header.classList.remove("is-hidden");
+    }, 300);
+
     enableScroll();
 
     searchInput.value = "";
-
-    setTimeout(() => {
-      searchBtn.focus();
-    }, 1000);
   });
 
   layer.addEventListener("click", ()=>{
@@ -64,12 +59,12 @@ export default () => {
       searchContent.classList.remove("is-shown");
     }
 
+    setTimeout(() => {
+      header.classList.remove("is-hidden");
+    }, 300);
+
     enableScroll();
 
     searchInput.value = "";
-
-    setTimeout(() => {
-      searchBtn.focus();
-    }, 1000);
   });
 };
