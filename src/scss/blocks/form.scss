@@ -340,10 +340,11 @@
     display: block;
     padding: 0.7rem 1.2rem !important;
     background-color: rgba($color: #8381F8, $alpha: 0.5);
-    font: 400 1rem/1 var(--main-ff) !important;
+    font-size: 1rem !important;
+    line-height: 1rem !important;
     border-radius: 0.5rem;
 
-    i {
+    strong {
       position: absolute;
       bottom: 100%;
       left: 1.3rem;
