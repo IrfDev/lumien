@@ -54,6 +54,14 @@ export default function initSelects() {
 
         const multipleLabel = select.dataset.name || "тест";
         select.parentElement.textContent = multipleLabel;
+
+        // slct.containerInner.element.addEventListener("click", () => {
+        //   if (slct.containerOuter.element.classList.contains("is-open")) {
+        //     setTimeout(() => {
+        //       slct.hideDropdown();
+        //     }, 0);
+        //   }
+        // });
       }
 
       function setValue(choice, input) {

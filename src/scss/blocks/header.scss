@@ -102,6 +102,10 @@
     &:focus {
       color: #e7630c;
     }
+
+    @include mq(lg) {
+      color: var(--color-white);
+    }
 	}
 
   &__block {
