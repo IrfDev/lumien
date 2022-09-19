@@ -70,6 +70,28 @@
     }
   }
 
+  &__content-text {
+    max-width: 59.4rem;
+    font: var(--font-body-M);
+    color: var(--text-color);
+
+    strong {
+      font-weight: 700;
+    }
+
+    a {
+      color: var(--color-accent);
+    }
+
+    @include mq(md) {
+      max-width: 100%;
+    }
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+    }
+  }
+
   &__content-item {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
@@ -77,20 +99,6 @@
 
     &:not(.mod-show) {
       display: none !important;
-    }
-
-    p {
-      max-width: 59.4rem;
-      font: var(--font-body-M);
-      color: var(--text-color);
-
-      @include mq(md) {
-        max-width: 100%;
-      }
-
-      @include mq(sm) {
-        font: var(--font-body-S);
-      }
     }
 
     &.mod-feautures {
