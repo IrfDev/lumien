@@ -44,7 +44,7 @@
       }
     }
 
-    @include mq(md) {
+    @include mq(custom, max, 877) {
       grid-column: 12 span !important;
 
       &:nth-child(1) {
