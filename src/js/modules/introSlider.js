@@ -35,7 +35,7 @@ export default () => {
     slidesPerView: 1,
     direction: 'vertical',
     allowTouchMove: false,
-    spaceBetween: 30,
+    spaceBetween: 20,
     watchSlidesProgress: true,
     breakpoints: {
       280: {
@@ -46,7 +46,7 @@ export default () => {
       1200: {
         slidesPerView: 1,
         direction: 'vertical',
-        spaceBetween: 30,
+        spaceBetween: 20,
       },
     },
   });
