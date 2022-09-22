@@ -363,6 +363,14 @@
       color: var(--color-accent);
     }
   }
+
+  .form__agreement-tooltip {
+    bottom: -2.6rem;
+
+    @include mq(sm) {
+      bottom: -3.1rem;
+    }
+  }
 }
 
 
@@ -693,6 +701,15 @@
       border-radius: 50%;
       margin-left: 0.5rem;
       content: attr(data-text);
+    }
+  }
+
+  .form__agreement-tooltip {
+    bottom: -2.9rem;
+
+    @include mq(sm) {
+      bottom: -2.8rem;
+      padding: 0.5rem 0.6rem!important;
     }
   }
 }
