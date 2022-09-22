@@ -12,29 +12,68 @@
     }
 
     &__item {
-      width: 24.9rem;
+      position: relative;
+      grid-column: 4 span;
+      padding: 3rem;
+      background: radial-gradient(108.98% 75.57% at 91.92% 62.28%, #FBCBB1 0%, #C2B0E7 100%);
+      border-radius: 2rem;
+      overflow: hidden;
+      padding: 1px;
       flex-shrink: 0;
 
       @include mq(sm) {
-        width: 19rem;
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        width: 15.4rem;
+      }
+    }
+
+    &__item-inner {
+      background-color: var(--color-white);
+      border-radius: 1.9rem;
+      padding: 3rem;
+
+      @include mq(sm) {
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
       }
     }
 
     &__slider {
       min-width: 0;
-      display: flex;
-      gap: 9rem;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: var(--grid-offset);
       counter-reset: section;
+
+      @include mq(sm) {
+        display: block;
+        margin-right: -15px;
+      }
+    }
+
+    &__slider-inner2 {
+      grid-column: 2 span;
+
+      @include mq(lg) {
+        display: none;
+      }
     }
 
     &__slider-inner {
-      display: flex;
-      align-items: flex-start;
-      flex-shrink: 0;
-      gap: 9rem;
+      grid-column: 8 span;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: var(--grid-offset);
+
+      @include mq(lg) {
+        grid-column: 10 span;
+      }
 
       @include mq(sm) {
-        gap: 3.2rem;
+        display: flex;
         overflow: auto;
         flex-shrink: inherit;
 
@@ -46,29 +85,46 @@
 
     &__item-top {
       width: 100%;
-      padding-bottom: 2.9rem;
-      border-bottom: 1px solid var(--color-cream);
-      margin-bottom: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6.8rem;
+
+      &::after {
+        display: inline-block;
+        counter-increment: section;
+        content: "0" counter(section);
+        color: #FBCBB1;
+        font-family: var(--font-title-mobile-3);
+        letter-spacing: -0.03em;
+        margin-bottom: 1.5rem;
+
+        @include mq(sm) {
+          font-size: 1.6rem;
+          line-height: 1;
+          margin: 0;
+        }
+      }
 
       @include mq(sm) {
         padding-bottom: 2rem;
         margin-bottom: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0;
       }
     }
 
     &__item-img {
-      margin: 0 auto;
-      width: 18rem;
-      height: 17.6rem;
-
-      @include mq(md) {
-        width: 14rem;
-        height: 13.6rem;
-      }
+      width: 10.6rem;
+      height: 10.6rem;
+      object-fit: contain;
 
       @include mq(sm) {
-        width: 8.8rem;
-        height: 8.8rem;
+        width: 7.2rem;
+        height: 7.2rem;
+        margin-bottom: 1.5rem;
       }
     }
 
@@ -76,38 +132,12 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      font: var(--font-sign);
-      background: var(--main-gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font: var(--font-title-3);
+      font-weight: 600;
 
       @include mq(sm) {
-        font: var(--font-body-S);
-      }
-
-      &::before {
-        display: inline-block;
-        counter-increment: section;
-        content: "0" counter(section);
-        background: none;
-        background-clip: border-box;
-        -webkit-background-clip: border-box;
-        -webkit-text-fill-color: white;
-        padding: 0 1rem;
-        border-radius: 2rem;
-        background: var(--main-gradient);
-        font-weight: 300;
-        font-family: var(--second-ff);
-        letter-spacing: -0.03em;
-        margin-bottom: 1.5rem;
-
-        @include mq(sm) {
-          font-size: 1.4rem;
-          line-height: 1;
-          padding: 0.1rem 1rem;
-          margin-bottom: 1rem;
-        }
+        font: var(--font-body-XS);
+        font-weight: 600;
       }
     }
 }

@@ -1,25 +1,25 @@
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+// import gsap from "gsap";
+// import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-gsap.registerPlugin([ScrollTrigger]);
+// gsap.registerPlugin([ScrollTrigger]);
 
 export default () => {
-  const loader = document.querySelector('.loader--text');
+  // const loader = document.querySelector('.loader--text');
 
-  if (window.matchMedia("(min-width: 765px)").matches) {
-    gsap.utils.toArray('.js-section').forEach((section, index) => {
-      const w = section.querySelector('.js-section-wrapper');
-      const [x, xEnd] = [0, section.offsetWidth - w.offsetWidth];
-      gsap.fromTo(w, {  x  }, {
-        x: xEnd,
-        scrollTrigger: {
-          trigger: section,
-          start: "top center",
-          pin: ".advantages__container",
-          scrub: 0.2,
-        }
-      });
-    });
-  }
+  // if (window.matchMedia("(min-width: 765px)").matches) {
+  //   gsap.utils.toArray('.js-section').forEach((section, index) => {
+  //     const w = section.querySelector('.js-section-wrapper');
+  //     const [x, xEnd] = [0, section.offsetWidth - w.offsetWidth];
+  //     gsap.fromTo(w, {  x  }, {
+  //       x: xEnd,
+  //       scrollTrigger: {
+  //         trigger: section,
+  //         start: "top center",
+  //         pin: ".advantages__container",
+  //         scrub: 0.2,
+  //       }
+  //     });
+  //   });
+  // }
 
 };
