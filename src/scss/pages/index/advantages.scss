@@ -86,7 +86,7 @@
     &__item-top {
       width: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       margin-bottom: 6.8rem;
 
@@ -98,6 +98,7 @@
         font-family: var(--font-title-mobile-3);
         letter-spacing: -0.03em;
         margin-bottom: 1.5rem;
+        line-height: 1;
 
         @include mq(sm) {
           font-size: 1.6rem;
