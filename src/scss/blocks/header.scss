@@ -19,10 +19,6 @@
 
   &.is-dark {
     --default-color: var(--color-dark);
-
-    .header__logo {
-      color: var(--color-dark);
-    }
   }
 
   &.is-white {
@@ -64,6 +60,12 @@
       &:hover,
       &:focus {
         color: var(--color-accent);
+      }
+    }
+
+    @include mq(lg) {
+      .header__logo {
+        color: var(--color-white);
       }
     }
   }
@@ -109,10 +111,6 @@
 
     &:focus {
       color: #e7630c;
-    }
-
-    @include mq(lg) {
-      color: var(--color-white);
     }
 	}
 
