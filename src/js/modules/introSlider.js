@@ -66,10 +66,10 @@ export default () => {
       nextEl: '.js-intro-btn-next',
       prevEl: '.js-intro-btn-prev',
     },
-    // autoplay: {
-    //   delay: 8000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+    },
   });
 
   // sliderIntroNav.controller.control = sliderIntro;
