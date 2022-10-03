@@ -141,4 +141,12 @@
       height: 15rem;
     }
   }
+
+  &_catalog-more {
+    min-height: 44rem;
+
+    @include mq(sm) {
+      min-height: 20.2rem;
+    }
+  }
 }

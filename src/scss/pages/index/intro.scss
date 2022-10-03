@@ -830,7 +830,7 @@
       color: var(--color-white);
 
       &::after {
-        animation: slide-progress 8s cubic-bezier(.3, 0, .3, 1) forwards;
+        animation: slide-progress 8s linear forwards;
       }
 
       &::before {
@@ -841,7 +841,7 @@
         width: 6.8rem;
 
         &::before {
-          animation: slide-progress-mobile 8s cubic-bezier(.3, 0, .3, 1) forwards;
+          animation: slide-progress-mobile 8s linear forwards;
         }
       }
     }

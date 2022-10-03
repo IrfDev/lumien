@@ -72,11 +72,13 @@ section.section-indent.top-offset.glossary
         .glossary__container-row
           for item, index in arr_ru
             - let isEmpty = index === 4 ? "is-empty" : false
-            a.glossary__container-item(href="#test" class=isEmpty)= item
+            a.glossary__container-item(href="#test" class=isEmpty)
+              span= item
         .glossary__container-row
           for item, index in arr_en
             - let isEmpty = index === 4 ? "is-empty" : false
-            a.glossary__container-item(href="#test" class=isEmpty)= item
+            a.glossary__container-item(href="#test" class=isEmpty)
+              span= item
     .grid-container
       .grid-container__block
       .grid-container__block.glossary__content-container

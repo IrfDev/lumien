@@ -231,6 +231,10 @@
     text-transform: uppercase;
     color: var(--color-accent);
     font: var(--font-body-S);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__content-cards-wrapper {

@@ -11,6 +11,8 @@
 
   .grid-container__block {
     &:nth-child(1) {
+      position: relative;
+      z-index: 3;
       @include mq(lg) {
         display: none;
       }
@@ -103,6 +105,13 @@
         height: 25.4rem;
       }
     }
+
+    &:hover {
+      .catalog-inner__item-help-more {
+        text-decoration: underline;
+        color: var(--color-accent);
+      }
+    }
   }
 
   &__item-help-legend {
@@ -129,6 +138,7 @@
     text-transform: uppercase;
     margin-top: auto;
     font: var(--font-body-S);
+    transition: color 200ms;
 
     @include mq(sm) {
       font: var(--font-body-XS);

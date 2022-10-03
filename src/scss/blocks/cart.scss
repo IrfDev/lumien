@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   padding: 2rem;
+  padding-bottom: 0;
 
   @include mq(sm) {
     padding: 1.5rem;

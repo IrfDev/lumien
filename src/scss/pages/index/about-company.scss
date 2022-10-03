@@ -112,7 +112,11 @@
     }
 
     @include mq(sm) {
-      display: none;
+      top: 12rem;
+      right: 4rem;
+      filter: blur(31px);
+      width: 57.4rem;
+      height: 61.5rem;
     }
   }
 
@@ -150,6 +154,10 @@
       color: var(--color-accent);
       text-transform: uppercase;
       margin-top: auto;
+
+      &:hover {
+        text-decoration: underline;
+      }
 
       @include mq(sm) {
         margin-top: 3rem;

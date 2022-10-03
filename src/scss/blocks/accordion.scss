@@ -28,7 +28,7 @@
     cursor: pointer;
     padding-bottom: 4rem;
 
-    &.mod-open {
+    &.is-active {
       .accordion__icon {
         border-color: rgba($color: #FF971D, $alpha: 0.4);
 
