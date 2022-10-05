@@ -2,8 +2,8 @@
   position: relative;
   z-index: 4;
   display: block;
-  overflow: hidden;
-  border-radius: 2.5rem;
+  // overflow: hidden;
+  // border-radius: 1.5rem;
 
   --application-text-color: var(--color-dark);
 
@@ -15,6 +15,7 @@
 
   @include mq(sm) {
     border-radius: 1.2rem;
+    overflow: hidden;
   }
 
   &__inner-heading {
@@ -183,18 +184,11 @@
 
       rect {
         width: 100%;
-        height: 52rem;
+        height: 100%;
         transform-origin: top center;
-        transform: scaleX(1) scaleY(0.5);
-        transition: transform var(--transition);
-
-        @include mq(custom, max, 1366) {
-          height: 50rem;
-        }
-
-        @include mq(lg) {
-          transform: scaleX(1) scaleY(1);
-        }
+        // transform: scaleX(1) scaleY(0.5);
+        transition: all var(--transition);
+        height: 25rem;
       }
     }
 
@@ -227,7 +221,8 @@
     div.applications-cart__img-wrapper {
       svg.svg {
         rect.rect {
-          transform: scaleX(1) scaleY(1);
+          // transform: scaleX(1) scaleY(1);
+          height: 100%;
         }
       }
     }
