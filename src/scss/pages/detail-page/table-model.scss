@@ -255,20 +255,21 @@
 
 
 .custom-table {
+  @include mq(lg) {
+    overflow: auto;
+  }
+
   table {
     width: 100%;
     margin: 3rem 0;
+    border-collapse: collapse;
 
     @include mq(lg) {
-      margin: 2rem 0;
-      overflow: auto;
-      display: block;
+      min-width: 90rem;
     }
 
     thead {
-      display: block;
       width: 100%;
-      padding: 2.5rem 0;
 
       @include mq(lg) {
         display: table-header-group;
@@ -277,31 +278,7 @@
       th {
         position: relative;
         text-align: left;
-
-
-        &:nth-child(1) {
-          width: 17.3rem;
-        }
-
-        &:nth-child(2) {
-          width: 13.2rem;
-        }
-
-        &:nth-child(3) {
-          width: 15.6rem;
-        }
-
-        &:nth-child(4) {
-          width: 18.7rem;
-        }
-
-        &:nth-child(5) {
-          width: 21.1rem;
-        }
-
-        &:nth-child(6) {
-          width: 19.7rem;
-        }
+        padding-bottom: 2rem;
       }
 
       td,
@@ -315,61 +292,16 @@
           line-height: 1.3rem;
         }
       }
-
-      @include mq(lg) {
-        padding: 1.6rem 0;
-      }
-    }
-
-    tr {
-      display: flex;
-      align-items: center;
     }
 
     td {
       position: relative;
       text-align: left;
-
-
-      &:nth-child(1) {
-        width: 17.3rem;
-      }
-
-      &:nth-child(2) {
-        width: 13.2rem;
-      }
-
-      &:nth-child(3) {
-        width: 15.6rem;
-      }
-
-      &:nth-child(4) {
-        width: 18.7rem;
-      }
-
-      &:nth-child(5) {
-        width: 21.1rem;
-      }
-
-      &:nth-child(6) {
-        width: 19.7rem;
-      }
     }
 
     tbody {
-      tr {
-        padding: 3.2rem 0;
-
-        &:last-child {
-          padding-bottom: 4.7rem;
-        }
-
-        @include mq(lg) {
-          padding: 1.6rem 0;
-        }
-      }
-
       td {
+        padding-bottom: 2rem;
         font: var(--font-body-S);
 
         @include mq(sm) {
