@@ -42,6 +42,7 @@ import aboutPageHistorySlider from './modules/aboutPageHistorySlider.js';
 import characteristics from './modules/charactiristics';
 import selectModalCallback from './modules/selectModalCallback';
 import agreementWarning from './modules/agreementWarning';
+import aplicationCart from './modules/aplicationCart';
 
 smoothscroll.polyfill();
 
@@ -94,6 +95,7 @@ documenReady(() => {
   characteristics();
   selectModalCallback();
   agreementWarning();
+  aplicationCart();
   // always last
   cartImgsSlider();
 });
