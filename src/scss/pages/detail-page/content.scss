@@ -55,6 +55,7 @@
   }
 
   &__main-img-block {
+
     &:nth-child(1),
     &:nth-child(2) {
       grid-column: 1 span;
@@ -130,6 +131,16 @@
     font: var(--font-title-4);
     margin: 7rem 0 3rem;
     max-width: 78.8rem;
+  }
+
+  h4, h5, h6 {
+    font: 600 2.2rem/140% var(--second-ff);
+    margin: 3rem 0 1.5rem;
+
+    @include mq(sm) {
+      margin: 2rem 0 1rem;
+      font: 600 1.8rem/120% var(--second-ff);
+    }
   }
 
   ul {
@@ -254,7 +265,8 @@
     &::after {
       position: absolute;
       top: 50%;
-      left: 50.3%;;
+      left: 50.3%;
+      ;
       width: 0;
       height: 0;
       border: 0 solid transparent;
