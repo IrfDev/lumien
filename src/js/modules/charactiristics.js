@@ -1,47 +1,30 @@
 const characteristics = () => {
   const charsBtn = document.querySelector(".product-characteristics__show-more-btn");
-  const charsRows = Array.from(document.querySelectorAll(".product-characteristics__row"));
-  const charsParents = Array.from(document.querySelectorAll(".product-characteristics"));
+  const charsWrapper = document.querySelector(".product-characteristics__wrapper");
   let flag = true;
 
   if (!charsBtn) return;
 
-  const hideRows = (parent, count) => {
-    parent.querySelectorAll(".product-characteristics__row").forEach((row, i) => {
-      if (i >= count) {
-        row.classList.add("hidden");
-      }
-    });
-  };
+  console.log(charsWrapper.offsetHeight);
 
-  charsParents.forEach(parent => {
-    const charsCount = Number(parent.dataset.count);
-
-    hideRows(parent, charsCount);
-  });
+  if (charsWrapper.offsetHeight < 170) {
+    charsBtn.style.display = "none";
+  }
 
   charsBtn.addEventListener("click", () => {
     switch (flag) {
       case true:
-        charsRows.forEach(row => row.classList.remove("hidden"));
+        charsWrapper.classList.add("is-active");
         flag = false;
         charsBtn.innerHTML = "Скрыть";
         break;
       case false:
-        charsParents.forEach(parent => {
-          const charsCount = Number(parent.dataset.count);
-
-          hideRows(parent, charsCount);
-        });
-        charsBtn.innerHTML = "Показать еще";
+        charsWrapper.classList.remove("is-active");
         flag = true;
+        charsBtn.innerHTML = "Показать ещё";
         break;
-    };
+    }
   });
-};
-
-window.reinitChars = () => {
-  characteristics();
 };
 
 export default characteristics;

@@ -133,22 +133,23 @@ section.section-indent.intro-product
             button.button.button-reset.product-details__btn(data-path="product") оставить заявку
       h3.intro-product__legend.site-second-heading Характеристики
       p.intro-product__txt Для определения характеристик необходимо заполнить все параметры
-      table.product-characteristics(data-count="3")
-        tbody
-          thead.product-characteristics__head
-            tr.product-characteristics__head-row
-              td.product-characteristics__head-item Характеристики оборудования:
-          for item in carachteristics
-            tr.product-characteristics__row
-              td.product-characteristics__item= item.name
-              td.product-characteristics__item= item.value
-      table.product-characteristics(data-count="4")
-        tbody
-          thead.product-characteristics__head
-            tr.product-characteristics__head-row
-              td.product-characteristics__head-item Характеристики дисплея:
-          for item in carachteristics
-            tr.product-characteristics__row
-              td.product-characteristics__item= item.name
-              td.product-characteristics__item= item.value
+      .product-characteristics__wrapper
+        table.product-characteristics(data-count="3")
+          tbody
+            thead.product-characteristics__head
+              tr.product-characteristics__head-row
+                td.product-characteristics__head-item Характеристики оборудования:
+            for item in carachteristics
+              tr.product-characteristics__row
+                td.product-characteristics__item= item.name
+                td.product-characteristics__item= item.value
+        table.product-characteristics(data-count="4")
+          tbody
+            thead.product-characteristics__head
+              tr.product-characteristics__head-row
+                td.product-characteristics__head-item Характеристики дисплея:
+            for item in carachteristics
+              tr.product-characteristics__row
+                td.product-characteristics__item= item.name
+                td.product-characteristics__item= item.value
       button.button.button-reset.mod-transparent.product-characteristics__show-more-btn Показать ещё

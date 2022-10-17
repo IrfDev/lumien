@@ -278,7 +278,7 @@
       th {
         position: relative;
         text-align: left;
-        padding-bottom: 2rem;
+        padding: 1rem 0 1.5rem;
       }
 
       td,
@@ -301,7 +301,7 @@
 
     tbody {
       td {
-        padding-bottom: 2rem;
+        padding: 1rem 0 1.5rem;
         font: var(--font-body-S);
 
         @include mq(sm) {

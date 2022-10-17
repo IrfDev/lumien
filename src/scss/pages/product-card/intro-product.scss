@@ -583,4 +583,13 @@
     padding: 2.2rem;
     margin-top: 5rem;
   }
+
+  &__wrapper {
+    max-height: 17rem;
+    overflow: hidden;
+
+    &.is-active {
+      max-height: 100%;
+    }
+  }
 }

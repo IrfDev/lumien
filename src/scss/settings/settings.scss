@@ -164,6 +164,10 @@ input[type=number] {
   -moz-appearance: textfield !important;
 }
 
+strong, b {
+  color: var(--color-accent);
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
