@@ -27,4 +27,8 @@ const characteristics = () => {
   });
 };
 
+window.reinitChars = () => {
+  characteristics();
+};
+
 export default characteristics;
