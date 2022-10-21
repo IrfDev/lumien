@@ -61,6 +61,58 @@
   &__content-text {
     font: var(--font-body-S);
     margin-bottom: 2rem;
+
+    h2 {
+      font: var(--font-title-3);
+      margin: 3rem 0 2rem;
+
+      @include mq(sm) {
+        font: var(--font-title-mobile-3);
+        margin: 2rem 0 1rem;
+      }
+    }
+
+    h3 {
+      font: var(--font-title-4);
+      margin: 2rem 0 1rem;
+    }
+
+    h4,
+    h5,
+    h6 {
+      font: 600 2.2rem/140% var(--second-ff);
+      margin: 1rem 0 0.5rem;
+
+      @include mq(sm) {
+        font: 600 1.8rem/120% var(--second-ff);
+      }
+    }
+
+    ul {
+      margin: 2rem 0;
+
+      li {
+        position: relative;
+        font: var(--font-body-S);
+        margin-bottom: 0.5rem;
+        padding-left: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          position: absolute;
+          top: 0.9rem;
+          left: 0;
+          width: 0.5rem;
+          height: 0.5rem;
+          background-color: currentColor;
+          border-radius: 50%;
+          content: "";
+        }
+      }
+    }
   }
 
   &__content-link {
