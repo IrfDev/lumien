@@ -18,6 +18,7 @@
     margin-right: 5.5rem;
     border-radius: 2rem;
     overflow: hidden;
+    flex-shrink: 0;
 
     @include mq(sm) {
       width: 100%;
