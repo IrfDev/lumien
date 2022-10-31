@@ -1,8 +1,6 @@
 .catalog-top-filter {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5rem;
   overflow: hidden;
+  position: relative;
 
   &__label {
     position: relative;
@@ -26,7 +24,7 @@
 
     input {
       &:checked {
-        ~ .catalog-top-filter__item-wrapper {
+        ~.catalog-top-filter__item-wrapper {
           --color-item: var(--color-white);
 
           &::after {
@@ -34,7 +32,7 @@
           }
         }
 
-        ~ .catalog-top-filter__item-icon {
+        ~.catalog-top-filter__item-icon {
           --color-item: var(--color-white);
         }
       }
@@ -88,6 +86,64 @@
       height: 100%;
       fill: var(--color-item);
       stroke: var(--color-item);
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem 1.4rem;
+    padding-bottom: 4.6rem;
+    border-bottom: 1px solid #EBEBEB;
+    margin-bottom: 2.1rem;
+
+    @include mq(lg) {
+      flex-wrap: nowrap;
+      padding-bottom: 0;
+      margin-bottom: 3rem;
+      border: none;
+      overflow: auto;
+
+      @include noScrollbar();
+    }
+
+    @include mq(sm) {
+      gap: 0.7rem;
+    }
+  }
+
+  &__label-item {
+    flex-shrink: 0;
+
+    @include mq(lg) {
+      white-space: nowrap;
+    }
+
+    input {
+      &:checked {
+        ~.catalog-top-filter__label-item-txt {
+          background-color: #FF971D;
+          border-color: #FF971D;
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+
+  &__label-item-txt {
+    display: block;
+    padding: 1rem;
+    border-radius: 5rem;
+    border: 1px solid #EBEBEB;
+    color: var(--color-dark);
+    cursor: pointer;
+    font: var(--font-body-S);
+    font-weight: 500;
+
+    @include mq(sm) {
+      font: var(--font-body-XXS);
+      font-weight: 500;
     }
   }
 }
