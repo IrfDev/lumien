@@ -1,10 +1,11 @@
 .common-catalog {
   &__heading {
-    font: var(--font-title-1);
-    margin-bottom: 5rem;
+    font: 700 9.2rem/1 var(--main-ff);
+    margin-bottom: 10rem;
+    letter-spacing: -0.02em;
 
     @include mq(lg) {
-      font: var(--font-title-2);
+      font: 700 4.4rem/1 var(--main-ff);
     }
 
     @include mq(sm) {
