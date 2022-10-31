@@ -119,6 +119,14 @@
       font: var(--font-body-M-small);
     }
   }
+
+  &--lvl-one {
+    .common-catalog__item {
+      &:nth-child(1) {
+        grid-column: 12 span;
+      }
+    }
+  }
 }
 
 .catalog-more {

@@ -1,0 +1,50 @@
+-
+  let catalog_arr = [
+    {
+      name: "Интерактивные дисплеи",
+      text: "Профессиональные дисплеи последнего поколения, поддерживающие технологию мультитач (до 20 касаний), обладающие огромным количеством функций и потрясающим качеством изображения. Современное решение для бизнеса и образования.",
+      count: "3",
+      class: "catalog-cart--grey-pink-bg"
+    },
+    {
+      name: "Мебель",
+      text: "Презентационная мебель Lumien представлена тремя моделями проекционных столиков, которые отличаются высоким качеством, надёжностью и сбалансированной ценой. Благодаря этим преимуществам, они могут широко использоваться при решении различных задач в сфере бизнеса и образования.",
+      count: "3",
+      class: "catalog-cart--yellow-bg"
+    },
+    {
+      name: "Тест",
+      text: "Lumien предлагает широкий выбор как моторизованных, так и стационарных экранов на раме больших размеров. Данные экраны пользуются большой популярностью в актовых залах, театрах, кинотеатрах, и на концертных площадках",
+      count: "4",
+      class: "catalog-cart--green-bg"
+    },
+    {
+      name: "Тест",
+      text: "Встраиваемые проекционные экраны Lumien являются отличным решением для оснащения современных офисных пространств и домашнего использования. Корпус проекционного экрана эргономично встраивается в фальш-потолок, делая экран абсолютно невидимым в неразвернутом положении.",
+      count: "1",
+      class: "catalog-cart--pink-bg"
+    }
+  ]
+
+section.section-indent.common-catalog.common-catalog--lvl-one
+  .site-container.grid-container
+    .grid-container__block
+    .grid-container__block
+      h1.common-catalog__heading Каталог
+  .site-container.common-catalog__container.grid-container
+
+    .common-catalog__item
+      a.catalog-cart.catalog-cart--lvl-one-card.catalog-cart--lvl-one.catalog-cart--purple-bg(href="/")
+        img.catalog-cart__img.lazyload(data-src=`images/catalog-img.png` src="#" alt=name)
+
+        .catalog-cart--lvl-one__infor-wrapper
+          h3.catalog-cart__heading Проекционные экраны
+          .catalog-cart__txt
+            p
+              | Профессиональные дисплеи последнего поколения, поддерживающие технологию мультитач (до 20 касаний), обладающие огромным количеством функций и потрясающим качеством изображения. Современное решение для бизнеса и образования.
+          span.catalog-cart__link
+            | Смотреть модели (43)
+
+    for item, index in catalog_arr
+      .common-catalog__item
+        +catalog-item(item.name, item.text, `img${index}`, item.count)(class="catalog-cart--lvl-one-card" class=item.class)

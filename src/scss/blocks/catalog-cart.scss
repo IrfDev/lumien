@@ -151,4 +151,138 @@
       min-height: 20.2rem;
     }
   }
+
+  &--lvl-one {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 9rem 13.2rem;
+
+    &::before {
+      content: none;
+    }
+
+    .catalog-cart__img {
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
+      flex-shrink: 0;
+      width: 65.4rem;
+      height: 42.2rem;
+      object-fit: contain;
+      margin-right: 15.8rem;
+
+      @include mq(md) {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 24.9rem;
+        height: 26.8rem;
+        object-fit: cover;
+        margin: 0;
+        object-position: left;
+      }
+
+      @include mq(sm) {
+        width: 13.9rem;
+        height: 15rem;
+      }
+    }
+
+    @include mq(lg) {
+      padding: 7rem 6.2rem;
+
+      .catalog-cart__txt {
+        max-width: 35.6rem;
+      }
+    }
+
+    @include mq(md) {
+      padding: 3.5rem;
+      align-items: stretch;
+      flex-direction: column;
+
+      &__infor-wrapper {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    @include mq(sm) {
+      padding: 2.5rem;
+    }
+  }
+
+  &--lvl-one-card {
+    border: 1px solid rgba(0, 0, 0, 0.03);
+
+    .catalog-cart__link {
+      color: #5957E0;
+    }
+
+    &::before {
+      content: none;
+    }
+
+    &:hover,
+    &:focus {
+      --heading-color: var(--color-dark);
+      --text-color: var(--color-dark);
+      --btn-color: var(--color-accent);
+    }
+
+    @include mq(sm) {
+      .catalog-cart__heading {
+        word-wrap: normal;
+      }
+    }
+  }
+
+  &--purple-bg {
+    background: linear-gradient(179.96deg, rgba(82, 81, 224, 0.67) 0.03%, #EBEBEB 99.97%);
+    border: none;
+
+    .catalog-cart__txt {
+      color: rgba($color: #fff, $alpha: 0.7);
+    }
+  }
+
+  &--grey-pink-bg {
+    background: linear-gradient(179.96deg, rgba(214, 214, 214, 0.4) 0.03%, rgba(185, 130, 211, 0.58) 97.65%);
+    border: none;
+
+    .catalog-cart__txt {
+      color: rgba($color: #8B7593, $alpha: 0.8);
+    }
+  }
+
+  &--yellow-bg {
+    background: linear-gradient(179.96deg, #EBEBEB 0.03%, rgba(223, 149, 48, 0.37) 99.97%);
+    border: none;
+
+    .catalog-cart__txt {
+      color: rgba($color: #87755E, $alpha: 0.8);
+    }
+  }
+
+  &--green-bg {
+    background: linear-gradient(242.62deg, #DBE9A3 9.42%, #D2E7EB 56.52%);
+    border: none;
+
+    .catalog-cart__txt {
+      color: rgba($color: #8B7593, $alpha: 0.8);
+    }
+  }
+
+  &--pink-bg {
+    background: linear-gradient(223.1deg, #FEBEFF 1.95%, rgba(236, 192, 237, 0) 93.25%);
+    border: none;
+
+    .catalog-cart__txt {
+      color: rgba($color: #87755E, $alpha: 0.8);
+    }
+  }
 }
