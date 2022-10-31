@@ -191,6 +191,18 @@
       }
     }
 
+    @include mq(lg, min) {
+      &:hover {
+        .catalog-cart__img {
+          transform: scale(1.03);
+        }
+
+        .catalog-cart__link {
+          color: #FF971D;
+        }
+      }
+    }
+
     @include mq(lg) {
       padding: 7rem 6.2rem;
 
@@ -223,6 +235,10 @@
       color: #5957E0;
     }
 
+    .catalog-cart__img {
+      transition: transform 100ms;
+    }
+
     &::before {
       content: none;
     }
@@ -237,6 +253,18 @@
     @include mq(sm) {
       .catalog-cart__heading {
         word-wrap: normal;
+      }
+    }
+
+    @include mq(lg, min) {
+      &:not(.catalog-cart--lvl-one):hover {
+        .catalog-cart__link {
+          color: #FF971D;
+        }
+
+        .catalog-cart__img {
+          transform: translateY(-50%) scale(1.03);
+        }
       }
     }
   }
