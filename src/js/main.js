@@ -43,6 +43,7 @@ import characteristics from './modules/charactiristics';
 import selectModalCallback from './modules/selectModalCallback';
 import agreementWarning from './modules/agreementWarning';
 import aplicationCart from './modules/aplicationCart';
+import autoHeight from './modules/autoHeight';
 
 smoothscroll.polyfill();
 
@@ -98,4 +99,5 @@ documenReady(() => {
   aplicationCart();
   // always last
   cartImgsSlider();
+  autoHeight();
 });
