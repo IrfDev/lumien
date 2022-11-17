@@ -1,11 +1,12 @@
 export default () => {
   const catalog = document.querySelector('.catalog-inner');
-  const media = window.matchMedia("(min-width: 768px)").matches;
 
   if (!catalog) return;
-  if (media) {
+
+  const calcHeight = () => {
     const headings = catalog.querySelectorAll(".cart__name");
     const texts = catalog.querySelectorAll(".cart__txt");
+    const media = window.matchMedia("(min-width: 768px)").matches;
     let headghtArr = [];
     let textArr = [];
 
@@ -17,30 +18,22 @@ export default () => {
       return max;
     }
 
-    headings.forEach(heading => {
-      const height = heading.clientHeight;
+    if (media) {
+      headings.forEach(heading => {
+        const height = heading.clientHeight;
 
-      headghtArr.push(height);
-    });
+        headghtArr.push(height);
+      });
 
-    texts.forEach(text => {
-      const height = text.clientHeight;
+      texts.forEach(text => {
+        const height = text.clientHeight;
 
-      textArr.push(height);
-    });
+        textArr.push(height);
+      });
 
-    const maxHeight = maxNum(headghtArr);
-    const maxHeightText = maxNum(textArr);
+      const maxHeight = maxNum(headghtArr);
+      const maxHeightText = maxNum(textArr);
 
-    headings.forEach(heading => {
-      heading.style.height = maxHeight + "px";
-    });
-
-    texts.forEach(text => {
-      text.style.height = maxHeightText + "px";
-    });
-
-    window.lumien_API.calculateCartHeight = () => {
       headings.forEach(heading => {
         heading.style.height = maxHeight + "px";
       });
@@ -48,6 +41,14 @@ export default () => {
       texts.forEach(text => {
         text.style.height = maxHeightText + "px";
       });
+
     };
   };
+  calcHeight();
+
+
+  window.lumien_API.calculateCartHeight = () => {
+    calcHeight();
+  };
 };
+

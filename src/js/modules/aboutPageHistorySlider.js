@@ -10,12 +10,15 @@ export default () => {
     spaceBetween: 25,
     watchSlidesProgress: true,
     freeMode: true,
+    allowTouchMove: false,
     breakpoints: {
       280: {
-        spaceBetween: 15
+        spaceBetween: 15,
+        allowTouchMove: true,
       },
       1025: {
         spaceBetween: 25,
+        allowTouchMove: false,
       },
     },
   });
