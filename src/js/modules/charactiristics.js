@@ -5,9 +5,10 @@ const characteristics = () => {
 
   if (!charsBtn) return;
 
-  console.log(charsWrapper.offsetHeight);
+  const length = charsWrapper.querySelectorAll(".product-characteristics__row").length;
 
-  if (charsWrapper.offsetHeight < 170) {
+
+  if (length <= 5) {
     charsBtn.style.display = "none";
   }
 
